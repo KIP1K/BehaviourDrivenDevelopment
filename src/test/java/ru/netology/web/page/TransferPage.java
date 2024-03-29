@@ -16,7 +16,6 @@ public class TransferPage {
     private final SelenideElement amountInput = $("[data-test-id='amount'] input");
     private final SelenideElement fromInput = $("[data-test-id='from'] input");
     private final SelenideElement transferHead = $(byText("Пополнение карты"));
-    private final SelenideElement errorMessage = $("[data-test-id='error-notification'] .notification__content");
 
 
     public TransferPage() {
@@ -32,9 +31,5 @@ public class TransferPage {
         amountInput.setValue(amountToTransfer);
         fromInput.setValue(cardInfo.getCardNumber());
         transferButton.click();
-    }
-
-    public void findErrorMessage(String expextedText) {
-        errorMessage.shouldHave(text(expextedText), Duration.ofSeconds(15)).shouldBe(visible);
     }
 }

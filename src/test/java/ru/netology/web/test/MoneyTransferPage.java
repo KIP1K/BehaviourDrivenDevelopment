@@ -47,18 +47,4 @@ public class MoneyTransferPage {
         assertEquals(expectedBalanceSecondCard, actualBalanceSecondCard);
     }
 
-    /* здесь похоронен плохой тест до лучших времен
-     @Test
-    void ErrorIfAmountMoreBalance() {
-        var amount = generateInvalidAmount(secondCardBalance);
-        var expectedBalanceFirstCard = firstCardBalance + amount;
-        var expectedBalanceSecondCard = secondCardBalance - amount;
-        var transferPage = dashboardPage.selectCardToTransfer(firstCardInfo);
-        transferPage.makeTransfer(String.valueOf(amount), secondCardInfo);
-        var actualBalanceFirstCard = dashboardPage.getCardBalance(firstCardInfo);
-        var actualBalanceSecondCard = dashboardPage.getCardBalance(secondCardInfo);
-        assertEquals(expectedBalanceFirstCard, actualBalanceFirstCard);
-        assertEquals(expectedBalanceSecondCard, actualBalanceSecondCard);
-        }
-*/
 }

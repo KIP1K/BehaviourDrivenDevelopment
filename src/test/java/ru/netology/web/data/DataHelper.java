@@ -31,11 +31,6 @@ public class DataHelper {
         return new Random().nextInt(Math.abs(balance)) + 1;
     }
 
-    public static int generateInvalidAmount(int balance) {
-        return Math.abs(balance) + new Random().nextInt(10000);
-    }
-
-
     @Value
     public static class AuthInfo {
         String login;
